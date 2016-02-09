@@ -1,0 +1,194 @@
+{% extends "index.html" %}
+{% set active_page = "Music" %}
+{% block title %}Joe's Music {% endblock %}
+{% block head %}
+
+  <style>
+
+        .top-content {
+           margin-top:50px;
+         }
+
+      .music {
+          padding-top:70px;
+          padding-bottom:30px;
+      }
+
+      .joes-music-player {
+         margin-top:40px;
+         width:100%;
+         border:none;
+      }
+
+      #divide {
+         color:grey;
+         border-width:4px;
+      }
+  </style>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/skin/blue.monday/css/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/jplayer/jquery.jplayer.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/add-on/jplayer.playlist.min.js"></script>
+<script type="text/javascript">
+
+
+//<![CDATA[
+$(document).ready(function(){
+    var playing = false;
+	var myPlaylist = new jPlayerPlaylist({
+		jPlayer: "#jquery_jplayer_N",
+		cssSelectorAncestor: "#jp_container_N",
+		size: {"width":"900px"}
+
+	}, {
+		playlistOptions: {
+			enableRemoveControls: true
+		},
+		swfPath: "https://cdnjs.cloudflare.com/ajax/libs/jplayer/2.9.2/jplayer/jquery.jplayer.swf",
+		supplied: "webmv, ogv, m4v, oga, mp3, wav",
+		useStateClassSkin: true,
+		autoBlur: false,
+		smoothPlayBar: true,
+		keyEnabled: true,
+		audioFullScreen: true
+	});
+
+	// Click handlers for jPlayerPlaylist method demo
+
+	// Audio mix playlist
+		myPlaylist.setPlaylist([
+			{
+				title:"She said she would",
+				artist:"Joe Holland",
+				mp3:"https://drive.google.com/file/d/0Bxg8qqWphCJqRnRXLVRGN1N4OU0/view?usp=sharing",
+				poster: "http://i1.sndcdn.com/avatars-000024040862-7ac74q-crop.jpg?30a2558"
+			},
+			{
+				title:"England is a bitch",
+				artist:"Joe Holland",
+				mp3:"music/England_is_a_bitch.wav",
+				poster: "http://i1.sndcdn.com/avatars-000024040862-7ac74q-crop.jpg?30a2558"
+			},
+			{
+				title:"Larry",
+				artist:"Joe Holland/Calum",
+				mp3:"music/larry.wav",
+				poster: "http://i1.sndcdn.com/avatars-000024040862-7ac74q-crop.jpg?30a2558"
+			},
+			{
+				title:"Diamonds on the souls of her shoes (remix)",
+				artist:"Joe Holland/Paul Simon",
+				mp3:"music/diamonds.wav",
+				poster: "http://i1.sndcdn.com/avatars-000024040862-7ac74q-crop.jpg?30a2558"
+			},
+			{
+				title:"CCC",
+				artist:"Joe Holland",
+				mp3:"music/ccc.wav",
+				poster: "http://i1.sndcdn.com/avatars-000024040862-7ac74q-crop.jpg?30a2558"
+			},
+			{
+				title:"Stop N Chat",
+				artist:"Joe Holland",
+				mp3:"music/stop-n-chat.wav",
+				poster: "http://i1.sndcdn.com/avatars-000024040862-7ac74q-crop.jpg?30a2558"
+			},
+				{
+				title:"Clarence Road",
+				artist:"Joe Holland",
+				mp3:"music/clarence_road.mp3",
+				poster: "http://i1.sndcdn.com/avatars-000024040862-7ac74q-crop.jpg?30a2558"
+			},
+				{
+				title:"Hackey Downs",
+				artist:"Joe Holland",
+				mp3:"music/hackey_downs.wav",
+				poster: "http://i1.sndcdn.com/avatars-000024040862-7ac74q-crop.jpg?30a2558"
+			},
+				{
+				title:"A lot of people",
+				artist:"Joe Holland",
+				mp3:"music/people.wav",
+				poster: "http://i1.sndcdn.com/avatars-000024040862-7ac74q-crop.jpg?30a2558"
+			}
+		]);
+
+		       $("#playlist").click(function(){
+		         if (playing) {
+		            myPlaylist.pause();
+		            playing = false;
+		            $(this).html("Play Joe's music");
+		         }
+		         else {
+                 myPlaylist.play();
+                 playing = true;
+                 $(this).html("Pause Joe's music");
+                 }
+});
+
+});
+
+//]]>
+</script>
+{% endblock %}
+
+{% block content %}
+<div class="container music">
+    <div class="row">
+         <div class="col-md-8 col-md-offset-2 center">
+              <h1>Joe's Music</h1>
+              <p class="lead">Here find a selection of Joe's music. More will be added in time. If you have any of Joe's tracks, please send to us.</p>
+              <button id="playlist" class="btn btn-success btn-lg">Play Joe's music</button>
+         </div>
+    </div>
+    <hr id="divide">
+    <div class="row">
+         <div class="col-md-8 col-md-offset-2">
+             <div id="jp_container_N" class="jp-video jp-video-270p joes-music-player" role="application" aria-label="media player">
+	<div class="jp-type-playlist">
+		<div id="jquery_jplayer_N" class="jp-jplayer"></div>
+		<div class="jp-gui">
+			<div class="jp-video-play">
+				<button class="jp-video-play-icon" role="button" tabindex="0">play</button>
+			</div>
+			<div class="jp-interface">
+				<div class="jp-progress">
+					<div class="jp-seek-bar">
+						<div class="jp-play-bar"></div>
+					</div>
+				</div>
+				<div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+				<div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+				<div class="jp-controls-holder">
+					<div class="jp-controls" style="margin-left:35%;">
+						<button class="jp-previous" role="button" tabindex="0">previous</button>
+						<button class="jp-play" role="button" tabindex="0">play</button>
+						<button class="jp-next" role="button" tabindex="0">next</button>
+						<button class="jp-stop hidden-xs" role="button" tabindex="0">stop</button>
+					</div>
+
+					<div class="jp-toggles">
+					</div>
+				</div>
+				<div class="jp-details">
+					<div class="jp-title" aria-label="title">&nbsp;</div>
+				</div>
+			</div>
+		</div>
+		<div class="jp-playlist">
+			<ul>
+				<!-- The method Playlist.displayPlaylist() uses this unordered list -->
+				<li>&nbsp;</li>
+			</ul>
+		</div>
+		<div class="jp-no-solution">
+			<span>Update Required</span>
+			To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+		</div>
+	</div>
+</div>
+         </div>
+        </div>
+    </div>
+{% endblock %}

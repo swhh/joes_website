@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+{% set active_page = "Gallery" %}
+{% block title %}Gallery{% endblock %}
+{% block head %}
+<style>
+             .top-content {
+           margin-top:80px;
+         }
+
+         h1 {
+           font-size:3em;
+    }
+</style>
+{% endblock %}
+{% block content %}
+    <div class="container top-content">
+        <img class="image" style="max-height:60%; max-width: 100%" src="{{img_url}}">
+        <nav>
+        <ul class="pager">
+            {% if img_id > 0 %}
+          <li><a href="{{url_for('gallery', img_id = img_id - 1)}}">Previous</a></li>
+            {% endif %}
+          <li><a href="{{url_for('gallery', img_id = img_id + 1)}}">Next</a></li>
+        </ul>
+      </nav>
+   </div>
+{% endblock %}

@@ -1,0 +1,35 @@
+         #topContainer {
+            padding-top:50px;
+         }
+         .center {
+            text-align:center;
+         }
+
+         #logo {
+            height:40px;
+            width:130px;
+            position:relative;
+            top: -10px;
+            border-radius:5px;
+         }
+
+         #main-image {
+             margin:0 auto;
+             margin-bottom:15px;
+             border-radius:10px;
+             text-align:center;
+
+         }
+
+         #joe {
+             margin:0 auto;
+             width:90%;
+             height:300px;
+         }
+
+
+          .formelem {
+           margin:20px 0;
+         }
+
+
