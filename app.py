@@ -4,10 +4,11 @@ from sqlalchemy.orm import sessionmaker
 from datetime import datetime
 from flask import Flask, render_template, request, url_for
 import constants
+import os
 
 app = Flask(__name__)
-
-engine = create_engine('sqlite:///sqlalchemy_example.db')
+uri = os.environ.get('DATABASE_URL', 'postgres://ikzsogicqzfoqk:zHHnNISnb4YH-2S8YiH5F9ES1U@ec2-107-20-136-89.compute-1.amazonaws.com:5432/d5c6j70ceof3k4')
+engine = create_engine(uri)
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
