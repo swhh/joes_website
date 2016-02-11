@@ -14,13 +14,15 @@
 {% endblock %}
 {% block content %}
     <div class="container top-content">
-        <img class="image" style="max-height:60%; max-width: 100%" src="{{img_url}}">
+        <img class="image" style="height:100%; width: 100%" src="{{img_url}}">
         <nav>
         <ul class="pager">
             {% if img_id > 0 %}
           <li><a href="{{url_for('gallery', img_id = img_id - 1)}}">Previous</a></li>
             {% endif %}
+            {% if img_id < limit - 1 %}
           <li><a href="{{url_for('gallery', img_id = img_id + 1)}}">Next</a></li>
+            {% endif %}
         </ul>
       </nav>
    </div>

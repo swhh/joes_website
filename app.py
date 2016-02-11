@@ -51,7 +51,7 @@ def about():
 @app.route('/gallery/<int:img_id>')
 def gallery(img_id):
     img_url = constants.URLs[img_id % len(constants.URLs)]
-    return render_template('gallery.html', img_id=img_id, img_url=img_url)
+    return render_template('gallery.html', img_id=img_id, img_url=img_url, limit=len(constants.URLs))
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
