@@ -7,7 +7,7 @@ import constants
 import os
 
 app = Flask(__name__)
-uri = os.environ.get('DATABASE_URL', 'postgres://ikzsogicqzfoqk:zHHnNISnb4YH-2S8YiH5F9ES1U@ec2-107-20-136-89.compute-1.amazonaws.com:5432/d5c6j70ceof3k4')
+uri = os.environ.get('DATABASE_URL', 'sqlalchemy_example.db')
 engine = create_engine(uri)
 Base.metadata.bind = engine
 

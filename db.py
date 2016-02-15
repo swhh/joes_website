@@ -3,7 +3,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from datetime import datetime
 
 Base = declarative_base()
-engine = create_engine('postgres://ikzsogicqzfoqk:zHHnNISnb4YH-2S8YiH5F9ES1U@ec2-107-20-136-89.compute-1.amazonaws.com:5432/d5c6j70ceof3k4', echo=True)
+engine = create_engine('sqlalchemy_example.db', echo=True)
 
 
 class Message(Base):
