@@ -7,7 +7,7 @@ import constants
 import os
 
 app = Flask(__name__)
-uri = os.environ.get('DATABASE_URL', 'sqlalchemy_example.db')
+uri = os.environ.get('DATABASE_URL', 'sqlite:///sqlalchemy_example.db')
 engine = create_engine(uri)
 Base.metadata.bind = engine
 
