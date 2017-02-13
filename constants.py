@@ -1,12 +1,12 @@
 URLs = {
-        0: 'http://gdriv.es/swhh/joe_1.jpg',
-        1: 'http://gdriv.es/swhh/joe_2.jpg',
-        2: 'http://gdriv.es/swhh/joe_3.jpg',
-        3: 'http://gdriv.es/swhh/joe_4.jpg',
-        4: 'http://gdriv.es/swhh/joe_5.jpg',
-        5: 'http://gdriv.es/swhh/joe_6.jpg',
-        6: 'http://gdriv.es/swhh/joe_7.jpg',
-        7: 'http://gdriv.es/swhh/joe_8.jpg',
-        8: 'http://gdriv.es/swhh/joe_9.jpg',
-        9: 'http://gdriv.es/swhh/joe_10.jpg'
+        0: 'https://dl.dropboxusercontent.com/u/53776211/joe_1.jpg',
+        1: 'https://dl.dropboxusercontent.com/u/53776211/joe_2.jpg',
+        2: 'https://dl.dropboxusercontent.com/u/53776211/3.jpg',
+        3: 'https://dl.dropboxusercontent.com/u/53776211/joe_4.jpg',
+        4: 'https://dl.dropboxusercontent.com/u/53776211/5.jpg',
+        5: 'https://dl.dropboxusercontent.com/u/53776211/joe_6.jpg',
+        6: 'https://dl.dropboxusercontent.com/u/53776211/joe_8.jpg',
+        7: 'https://dl.dropboxusercontent.com/u/53776211/joe_9.jpg',
+        8: 'https://dl.dropboxusercontent.com/u/53776211/joe_10.jpg',
+        9: 'https://dl.dropboxusercontent.com/u/53776211/joe_5.jpg'
     }
