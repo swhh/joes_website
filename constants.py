@@ -1,5 +1,5 @@
 URLs = {
-        0: 'http://imgur.com/a/g8cQl.jpg',
+        0: 'http://imgur.com/c3aRVtN.jpg',
         1: 'http://i.imgur.com/EvHHVpI.jpg',
         2: 'http://imgur.com/49JA1dK.jpg',
         3: 'http://i.imgur.com/Lj6puh6.jpg',
