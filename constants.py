@@ -1,12 +1,12 @@
 URLs = {
-        0: 'https://dl.dropboxusercontent.com/u/53776211/joe_1.jpg',
-        1: 'https://dl.dropboxusercontent.com/u/53776211/joe_2.jpg',
-        2: 'https://dl.dropboxusercontent.com/u/53776211/3.jpg',
-        3: 'https://dl.dropboxusercontent.com/u/53776211/joe_4.jpg',
-        4: 'https://dl.dropboxusercontent.com/u/53776211/5.jpg',
-        5: 'https://dl.dropboxusercontent.com/u/53776211/joe_6.jpg',
-        6: 'https://dl.dropboxusercontent.com/u/53776211/joe_8.jpg',
-        7: 'https://dl.dropboxusercontent.com/u/53776211/joe_9.jpg',
-        8: 'https://dl.dropboxusercontent.com/u/53776211/joe_10.jpg',
-        9: 'https://dl.dropboxusercontent.com/u/53776211/joe_5.jpg'
+        0: 'http://imgur.com/a/g8cQl.jpg',
+        1: 'http://i.imgur.com/EvHHVpI.jpg',
+        2: 'http://imgur.com/49JA1dK.jpg',
+        3: 'http://i.imgur.com/Lj6puh6.jpg',
+        4: 'http://imgur.com/WPkx7bz.jpg',
+        5: 'http://i.imgur.com/QCUNqS6.jpg',
+        6: 'http://imgur.com/NymehcE.jpg',
+        7: 'http://imgur.com/DZEKyZw.jpg',
+        8: 'http://imgur.com/s2uhi7H.jpg',
+        9: 'http://imgur.com/wXsDygd.jpg'
     }
